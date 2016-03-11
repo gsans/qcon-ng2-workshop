@@ -8,7 +8,7 @@ import {RouterActive} from './directives/router-active';
 import {Home} from './home/home';
 import {Users} from './users/users';
 import {About} from './about/about';
-
+import {Contact} from './contact/contact';
 
 /*
  * App Component
@@ -45,6 +45,9 @@ import {About} from './about/about';
           <li router-active>
             <a [routerLink]=" ['About'] ">About</a>
           </li>
+          <li router-active>
+            <a [routerLink]=" ['Contact'] ">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -58,6 +61,7 @@ import {About} from './about/about';
   { path: '/home', component: Home, name: 'Home' },
   { path: '/users', component: Users, name: 'Users' },
   { path: '/about', component: About, name: 'About' },
+  { path: '/contact', component: Contact, name: 'Contact' },
   { path: '/**', redirectTo: ['Home'] }
 ])
 export class App {
